@@ -2,6 +2,7 @@ import Chart from "./components/Chart"; // Import the Chart component
 import "./App.css";
 import LineChart from "./components/LineChart";
 import BarChart from "./components/BarChart";
+import DashboardCard from "./components/DashboardCard";
 
 function App() {
   // Example data; could also be fetched from an API or other source
@@ -20,9 +21,11 @@ function App() {
     <>
       <h1>Plot in React</h1>
       <h1>My Mood during the Week</h1>
-      <Chart data={data} /> {/* Render the Chart component */}
       <LineChart data={data} />
       <BarChart data={data} />
+
+      {/*tested shadcn ui for displaying data with shadcn components */}
+      <DashboardCard data={data} />
     </>
   );
 }

@@ -43,7 +43,7 @@ function Chart({ data }) {
           ], // Specify the correct order, otherwise the chart will sort the days alphabetically
         },
         y: {
-          label: "mood (1 )",
+          label: "mood (1 = bad, 7 = good)",
         },
       });
       ref.current.append(plot); // then append the plot to the div element
