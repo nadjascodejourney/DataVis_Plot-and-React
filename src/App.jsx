@@ -1,6 +1,7 @@
 import Chart from "./components/Chart"; // Import the Chart component
 import "./App.css";
 import LineChart from "./components/LineChart";
+import BarChart from "./components/BarChart";
 
 function App() {
   // Example data; could also be fetched from an API or other source
@@ -21,6 +22,7 @@ function App() {
       <h1>My Mood during the Week</h1>
       <Chart data={data} /> {/* Render the Chart component */}
       <LineChart data={data} />
+      <BarChart data={data} />
     </>
   );
 }
