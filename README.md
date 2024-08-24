@@ -9,3 +9,5 @@ This can be done by using Reacts useRef hook to designate a DOM node for Plot, w
 All this happens within a useEffect and by doing this, Plot acutally draws its graphs as a side effect within the app.
 
 ![Projektvorschau](./ScreenshotsPlotCharts.png)
+
+This project also is using a shadcn ui card component for the dot chart just to try out.
