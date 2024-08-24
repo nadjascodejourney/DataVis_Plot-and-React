@@ -12,7 +12,10 @@ function Chart({ data }) {
       const plot = Plot.plot({
         // Create a Plot chart with the Plot.plot() function from the Plot package; .plot() accepts an object with configuration options like data, marks, and width
         // For example:
-        marks: [Plot.dot(data, { x: "x", y: "y" })],
+        style: {
+          fontSize: "12px", // Change the base font size
+        },
+        marks: [Plot.dot(data, { x: "x", y: "y", fill: "blue", r: 5 })],
         // set the color of the dots to blue
         color: {},
         // set the width of the chart to 400
