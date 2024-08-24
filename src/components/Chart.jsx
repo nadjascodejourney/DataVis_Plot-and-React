@@ -12,19 +12,38 @@ function Chart({ data }) {
       const plot = Plot.plot({
         // Create a Plot chart with the Plot.plot() function from the Plot package; .plot() accepts an object with configuration options like data, marks, and width
         // For example:
+        width: 600, // Specify a width
+        height: 400, // Specify a height
+        margin: 60, // Add margin to accommodate labels
         style: {
           fontSize: "12px", // Change the base font size
         },
-        marks: [Plot.dot(data, { x: "x", y: "y", fill: "blue", r: 5 })],
+        marks: [
+          Plot.dot(data, {
+            x: "xValue",
+            y: "yValue", // Set the x and y values to the x and y properties of the data objects (=> xValue and yValue) Plot will use these properties to plot the data points
+            fill: "blue",
+            r: 5,
+          }),
+        ],
         // set the color of the dots to blue
         color: {},
         // set the width of the chart to 400
         /*  width: 400, */
         x: {
-          label: "x axis",
+          label: "weekday",
+          domain: [
+            "Montag",
+            "Dienstag",
+            "Mittwoch",
+            "Donnerstag",
+            "Freitag",
+            "Samstag",
+            "Sonntag",
+          ], // Specify the correct order, otherwise the chart will sort the days alphabetically
         },
         y: {
-          label: "y axis",
+          label: "mood (1 )",
         },
       });
       ref.current.append(plot); // then append the plot to the div element
